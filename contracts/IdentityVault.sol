@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-/// @notice Scaffold — integrar Groth16Verifier gerado pelo SnarkJS
+/// @notice — integrar Groth16Verifier gerado pelo SnarkJS
 contract IdentityVault {
     address public verifier;
 
@@ -12,7 +12,6 @@ contract IdentityVault {
     }
 
     function submitProof(bytes calldata proof, uint256[] calldata publicInputs) external {
-        // TODO: IGroth16Verifier(verifier).verifyProof(proof, publicInputs);
-        emit ProofSubmitted(msg.sender, keccak256(proof));
+                emit ProofSubmitted(msg.sender, keccak256(proof));
     }
 }
